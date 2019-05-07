@@ -1,10 +1,11 @@
-import java.util.{Date, Locale}
-import java.text.DateFormat._
+import java.time.LocalDate
+import java.time.format.{DateTimeFormatter, FormatStyle}
+import java.util.Locale
 
 object ScalaJavaEx {
   def main(args: Array[String]): Unit ={
-    val now = new Date
-    val df = getDateInstance(LONG, Locale.FRANCE)
-    println(df format now)
+    val now = LocalDate.now
+    val df = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(Locale.FRANCE)
+    println(now format df)
   }
 }

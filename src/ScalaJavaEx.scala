@@ -16,3 +16,4 @@ object ScalaJavaEx {
     println(test toString)
   }
 }
+

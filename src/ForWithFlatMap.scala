@@ -16,19 +16,15 @@ object ForWithFlatMap {
           List(
               // listStr.map(y => (y, x) for List(1,2,3)
               List(
-                (
                   (one, List(1,2,3))
                   (two, List(1,2,3))
                   (three, List(1,2,3))
-                )
               )
               // listStr.map(y => (y, x) for List(4,5,6)
               List(
-                (
                   (one, List(4,5,6))
                   (two, List(4,5,6))
                   (three, List(4,5,5))
-                )
               )
       */
 
@@ -40,16 +36,12 @@ object ForWithFlatMap {
       /*
 
           List(
-                (
                   (one, List(1,2,3))
                   (two, List(1,2,3))
                   (three, List(1,2,3))
-                )
-                (
                   (one, List(4,5,6))
                   (two, List(4,5,6))
                   (three, List(4,5,5))
-                )
               )
       */
 

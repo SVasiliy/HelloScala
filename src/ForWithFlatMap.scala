@@ -49,6 +49,24 @@ object ForWithFlatMap {
 
     )
 
+    println(
+
+      // same thing with For
+      for (x <- list; y <- listStr) yield (y, x)
+
+    )
+
+    println(
+
+      // same thing with For + .filter
+      for {
+        x <- list if x == List(1,2,3)
+        y <- listStr
+      } yield (y, x)
+
+    )
+
+
   }
 }
 

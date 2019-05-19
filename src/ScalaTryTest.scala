@@ -11,6 +11,9 @@ object ScalaTryTest {
       println(returnTry("tsdf"))
 
 
+      val is: (Int, String) = (42, "foo")
+      println(is)
+
   }
 }
 

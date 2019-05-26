@@ -17,9 +17,6 @@ object ScalaListTest {
       for (x <- myListBuffer)
         println(x)
 
-      myList.
-
-
   }
 }
 

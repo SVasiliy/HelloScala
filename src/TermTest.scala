@@ -32,6 +32,10 @@ object TermTest {
     println
     println(isIdentityFun(id))
     println(isIdentityFun(t))
+
+    case class Dog(name: String, breed: String)
+    val d1 = Dog("Scooby", "Doberman")
+    println(d1)
   }
 
 

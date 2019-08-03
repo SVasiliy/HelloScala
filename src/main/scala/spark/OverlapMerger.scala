@@ -25,8 +25,8 @@ object OverlapMerger extends App {
 
   val rdd = sc.parallelize(Seq(
       Seq(1,2,3,4,5),
-      Seq(1,2,3,4,5),
-      Seq(1,2,3,4,5),
+      Seq(1,2,3,4,5,8),
+      Seq(1,2,3,4,5,7),
       Seq(2,2,3,4,6)
   ))
 
@@ -37,7 +37,12 @@ object OverlapMerger extends App {
 
   df2.show()
 
-  val df3 = df2.groupBy(col("colB")).agg(collect_set("colA"))
+  val df3 = df2.groupBy(col("colB")).agg(collect_set("colA").alias("colA"))
   df3.show()
+  df3.printSchema()
 
+  val xxx = udf((x:Seq[Seq[Int]]) => {x.flatMap(i => i).distinct})
+  val df4 = df3.withColumn("colA", xxx($"colA"))
+
+  df4.show(20,false)
 }

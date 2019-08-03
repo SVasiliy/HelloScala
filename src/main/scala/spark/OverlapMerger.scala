@@ -2,6 +2,7 @@ package spark
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.sql.functions.{col}
 
 object OverlapMerger extends App {
 
@@ -34,5 +35,8 @@ object OverlapMerger extends App {
   val df2 = df.withColumn("colB", df.col("colA").getItem(0))
 
   df2.show()
+
+  val df3 = df2.groupBy(col("colB")).count()
+  df3.show()
 
 }

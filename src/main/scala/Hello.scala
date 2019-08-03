@@ -16,7 +16,7 @@ object Hello extends App {
 
   // test null value
   def maybeItWillReturnSomething(flag: Boolean): Option[String] = {
-    if (flag) Some("Found value") else null
+    if (flag) Some("Found value") else null //None
   }
 
   println(maybeItWillReturnSomething(false).getClass)

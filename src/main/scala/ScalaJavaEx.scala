@@ -13,7 +13,7 @@ object ScalaJavaEx {
     println(now format df)
 
     val test = new Student("sdf", 4)
-    println(test toString)
+    println(test.toString)
   }
 }
 

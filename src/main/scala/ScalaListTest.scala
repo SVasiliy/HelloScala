@@ -11,7 +11,7 @@ object ScalaListTest {
 
       println("--- --- test ListBuffer --- ---")
 
-      val myListBuffer: ListBuffer[String] = myList.to[ListBuffer]
+      val myListBuffer: ListBuffer[String] = myList.to(ListBuffer)
       myListBuffer += "peach"
 
       for (x <- myListBuffer)
